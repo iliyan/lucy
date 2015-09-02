@@ -1,0 +1,52 @@
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=350m; support was removed in 8.0
+[   3948]   WARN - om.intellij.util.ProfilingUtil - Profiling agent is not enabled. Add -agentlib:yjpagent to idea.vmoptions if necessary to profile IDEA. 
+[   8033]   WARN - api.vfs.impl.local.FileWatcher - Watcher terminated with exit code 130 
+[  11039]  ERROR - penapi.project.DumbServiceImpl - java.lang.InterruptedException 
+com.intellij.openapi.application.RuntimeInterruptedException: java.lang.InterruptedException
+	at com.intellij.openapi.application.impl.ApplicationImpl.c(ApplicationImpl.java:917)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:886)
+	at com.intellij.webcore.libraries.ScriptingLibraryManager.getAllLibraryFiles(ScriptingLibraryManager.java:329)
+	at com.intellij.webcore.libraries.ScriptingIndexableSetContributor.getLibraryFiles(ScriptingIndexableSetContributor.java:45)
+	at com.intellij.webcore.libraries.ScriptingIndexableSetContributor.getAdditionalProjectRootsToIndex(ScriptingIndexableSetContributor.java:37)
+	at com.intellij.util.indexing.IndexableSetContributor.getProjectRootsToIndex(IndexableSetContributor.java:51)
+	at com.intellij.util.indexing.FileBasedIndexImpl.iterateIndexableFiles(FileBasedIndexImpl.java:2598)
+	at com.intellij.util.indexing.UnindexedFilesUpdater.a(UnindexedFilesUpdater.java:71)
+	at com.intellij.util.indexing.UnindexedFilesUpdater.performInDumbMode(UnindexedFilesUpdater.java:114)
+	at com.intellij.openapi.project.DumbServiceImpl$8.run(DumbServiceImpl.java:416)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$2.run(CoreProgressManager.java:152)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.a(CoreProgressManager.java:452)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:402)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:54)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:137)
+	at com.intellij.openapi.project.DumbServiceImpl.a(DumbServiceImpl.java:407)
+	at com.intellij.openapi.project.DumbServiceImpl.access$1100(DumbServiceImpl.java:52)
+	at com.intellij.openapi.project.DumbServiceImpl$7.run(DumbServiceImpl.java:389)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$TaskRunnable.run(CoreProgressManager.java:563)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$2.run(CoreProgressManager.java:152)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.a(CoreProgressManager.java:452)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:402)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:54)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:137)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl$1.run(ProgressManagerImpl.java:126)
+	at com.intellij.openapi.application.impl.ApplicationImpl$8.run(ApplicationImpl.java:400)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+	at org.jetbrains.ide.PooledThreadExecutor$1$1.run(PooledThreadExecutor.java:56)
+Caused by: java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1302)
+	at java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock.lockInterruptibly(ReentrantReadWriteLock.java:772)
+	at com.intellij.openapi.application.impl.ApplicationImpl.c(ApplicationImpl.java:913)
+	... 31 more
+[  11043]  ERROR - penapi.project.DumbServiceImpl - WebStorm 10.0.4  Build #WS-141.1550 
+[  11043]  ERROR - penapi.project.DumbServiceImpl - JDK: 1.8.0_60 
+[  11044]  ERROR - penapi.project.DumbServiceImpl - VM: Java HotSpot(TM) 64-Bit Server VM 
+[  11045]  ERROR - penapi.project.DumbServiceImpl - Vendor: Oracle Corporation 
+[  11045]  ERROR - penapi.project.DumbServiceImpl - OS: Linux 
+[  11045]  ERROR - penapi.project.DumbServiceImpl - Last Action:  
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=350m; support was removed in 8.0
+[   3695]   WARN - om.intellij.util.ProfilingUtil - Profiling agent is not enabled. Add -agentlib:yjpagent to idea.vmoptions if necessary to profile IDEA. 

@@ -1,4 +1,4 @@
-angular.module('lucy', ['ui.bootstrap','ui.utils','ui.router','ngAnimate','templates']);
+angular.module('lucy', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'templates', 'd3']);
 
 angular.module('lucy').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode({

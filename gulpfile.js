@@ -1,9 +1,9 @@
 //'use strict';
-// generated on 2015-09-02 using generator-cg-gas 3.3.4
+// generated on 2015-08-29 using generator-cg-gas 3.3.4
 
-var config = require('./build/build.config.js');
-var karmaConfig = require('./build/karma.config.js');
-var protractorConfig = require('./build/protractor.config.js');
+var config = require('./build.config.js');
+var karmaConfig = require('./karma.config.js');
+var protractorConfig = require('./protractor.config.js');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
@@ -21,9 +21,15 @@ var modRewrite = require('connect-modrewrite');
 //update webdriver if necessary, this task will be used by e2e task
 gulp.task('webdriver:update', webdriverUpdate);
 
+var cfg = function () {
+    this.set = function (x) {
+        return _.assign(this, x);
+    }
+};
+
 // run unit tests and watch files
 gulp.task('tdd', function(cb) {
-  karma.start(_.assign({}, karmaConfig, {
+  karma.start(_.assign({}, karmaConfig(new cfg()), {
     singleRun: false,
     action: 'watch',
     browsers: ['PhantomJS']
@@ -32,7 +38,7 @@ gulp.task('tdd', function(cb) {
 
 // run unit tests with travis CI
 gulp.task('travis', ['build'], function(cb) {
-  karma.start(_.assign({}, karmaConfig, {
+  karma.start(_.assign({}, karmaConfig(new cfg()), {
     singleRun: true,
     browsers: ['PhantomJS']
   }), cb);
@@ -161,7 +167,7 @@ gulp.task('copy', function() {
 
 //copy html templates in dist folder
 gulp.task('copy:templates', function() {
-  return gulp.src([      
+  return gulp.src([
       config.base + '/modules/**/*.html',
     ]).pipe(gulp.dest(config.dist+'/modules'))
     .pipe($.size({
@@ -240,7 +246,7 @@ gulp.task('serve', ['build'], function() {
 //run the app packed in the dist folder
 gulp.task('serve:dist', ['build:dist'], function() {
   browserSync({
-    notify: false,    
+    notify: false,
     server: {
       baseDir:  [config.dist],
       middleware: [

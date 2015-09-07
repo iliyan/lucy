@@ -2,6 +2,7 @@
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 /* Component SCSS */
+@import "modules/d3/d3.scss";
 /* Add Component SCSS Above */
 
 /* Personal preference for BS modal.  The SCSS below makes the backdrop white and

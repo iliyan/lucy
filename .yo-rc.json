@@ -17,6 +17,12 @@
         "marker": "/* Add Component SCSS Above */",
         "template": "@import \"<%= filename %>\";"
       }
-    }
+    },
+    "modules": [
+      {
+        "name": "d3",
+        "file": "app/modules/d3/d3.js"
+      }
+    ]
   }
 }

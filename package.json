@@ -46,5 +46,6 @@
   },
   "scripts": {
     "test": "gulp travis"
-  }
+  },
+  "dependencies": {}
 }

@@ -6,14 +6,15 @@ module.exports = {
   tmp: 'build/tmp',
   dist: 'build/dist',
   base: 'app',
-  tpl: 'app/modules/**/*.html',   
-  mainScss: 'app/app.scss', 
-  scss: 'app/**/*.scss', 
+  tpl: ['app/modules/**/*.html', 'app/partial/**/*.html'],
+  mainScss: 'app/app.scss',
+  scss: 'app/**/*.scss',
   js: [
-    'app/modules/**/*.js',
-    '!app/vendor/**/*.js',
-    'app/**/*-spec.js',   //unit
-    'app/test/e2e/**/*.js'  //e2e
+      'app/modules/**/*.js',
+      'app/partial/**/*.js',
+      '!app/vendor/**/*.js',
+      'app/**/*spec.js',   //unit
+      'app/test/e2e/**/*.js',  //e2e
   ],
   index: 'app/index.html',
   assets: 'app/assets/**',

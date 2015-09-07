@@ -9,7 +9,7 @@ angular
 
             this.$get = function() {
                 return this.original;
-            }
+            };
 
         }])
     .run(['d3', function (d3) {

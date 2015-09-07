@@ -7,9 +7,11 @@ var defaults = {
     //This is the list of file patterns to load into the browser during testing.
     //TODO if you install a new vendor component with bower you have to write the new dependency below
     files: [
-        baseDir + '/vendor/jquery/**/*min.js',
+        //baseDir + '/vendor/jquery/**/*min.js',
+        baseDir + '/vendor/jquery/dist/jquery.js',
         baseDir + '/vendor/underscore/underscore.js',
-        baseDir + '/vendor/bootstrap/**/*min.js',
+        //baseDir + '/vendor/bootstrap/**/*min.js',
+        baseDir + '/vendor/bootstrap/dist/bootstrap.js',
         baseDir + '/vendor/angular/angular.js',
         baseDir + '/vendor/angular-mocks/angular-mocks.js',
         baseDir + '/vendor/angular-ui-router/release/angular-ui-router.js',
@@ -19,10 +21,12 @@ var defaults = {
         baseDir + '/vendor/angular-ui-utils/ui-utils.js',
         baseDir + '/vendor/angular-bootstrap/ui-bootstrap-tpls.js',
         baseDir + '/vendor/moment/moment.js',
-        baseDir + '/vendor/**/*min.js',
+        //baseDir + '/vendor/**/*min.js',
+        baseDir + '/vendor/d3/d3.js',
+        baseDir + '/app.js',
         baseDir + '/modules/**/*.js',
-        'build/tmp/*.js',
-        baseDir + '/modules/**/*-spec.js'
+        baseDir + '/partial/**/*.js',
+        'build/tmp/*.js'
     ],
 
     //used framework
@@ -50,7 +54,7 @@ var defaults = {
     },
 
     htmlReporter: {
-        outputDir: baseDir + '//test/unit-results/html'
+        outputDir: baseDir + '/test/unit-results/html'
     },
 
     logLevel: 'info',

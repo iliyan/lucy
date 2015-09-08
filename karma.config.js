@@ -21,10 +21,11 @@ var defaults = {
         baseDir + '/vendor/angular-bootstrap/ui-bootstrap-tpls.js',
         baseDir + '/vendor/moment/moment.js',
         baseDir + '/vendor/d3/d3.js',
-        baseDir + '/app.js',
+        'build/tmp/*.js',
+        baseDir + '/modules/**/*.module.js',
         baseDir + '/modules/**/*.js',
-        baseDir + '/partial/**/*.js',
-        'build/tmp/*.js'
+        baseDir + '/app.js',
+        baseDir + '/partial/**/*.js'
     ],
 
     //used framework

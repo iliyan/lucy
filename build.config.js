@@ -10,6 +10,7 @@ module.exports = {
   mainScss: 'app/app.scss',
   scss: 'app/**/*.scss',
   js: [
+      'app/modules/**/*.module.js',
       'app/modules/**/*.js',
       'app/partial/**/*.js',
       '!app/vendor/**/*.js',

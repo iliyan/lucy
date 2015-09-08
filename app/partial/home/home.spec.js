@@ -9,9 +9,10 @@ describe('HomeCtrl', function() {
       ctrl = $controller('HomeCtrl', {$scope: scope});
     }));
 
-	it('should ...', inject(function() {
+	it('should be available', inject(function() {
 
-		expect(1).toEqual(1);
+		expect(ctrl).toBeDefined();
+		expect(ctrl.factories).toBeDefined();
 
 	}));
 

@@ -111,9 +111,7 @@ gulp.task('build', ['clean'], function(cb) {
 
 //generate a minified css files, 2 js file, change theirs name to be unique, and generate sourcemaps
 gulp.task('html', function() {
-  var assets = $.useref.assets(
-  { searchPath: '{build,app}'});
-// 'build/tmp/templates.js'
+  var assets = $.useref.assets({ searchPath: '{build,app}'}); // 'build/tmp/templates.js'
   return gulp.src(config.index)
     .pipe(assets)
     .pipe($.sourcemaps.init())

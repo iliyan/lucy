@@ -1,0 +1,57 @@
+/* Component SCSS */
+/* knobs: */
+
+.kby-knob  {
+    r: 80;
+    stroke: red;
+    stroke-width: 6;
+    opacity: 1;
+}
+
+.kby-knob.adjustable {
+    stroke-dasharray: 2 2;
+    stroke-dashoffset: 16;
+}
+
+.kby-condition {
+    fill: #f3e7d6;
+}
+
+.kby-command {
+    fill: #d6dffe;
+}
+
+.kby-destination {
+    fill: #e0e0e0;
+}
+
+.kby-factory:hover > circle {
+    stroke: gray;
+}
+
+.kby-factory:active > circle {
+    cursor: pointer;
+    stroke: red;
+    stroke-width: 6;
+    opacity: 0.1;
+}
+
+.kby-factory.kby-condition > circle {
+    fill: #f3e7d6;
+    stroke-width: 3;
+    r: 20
+}
+
+.kby-factory.kby-command > circle {
+    fill: #d6dffe;
+    stroke-width: 3;
+    r: 20
+}
+
+.kby-factory.kby-destination > circle {
+    fill: #e0e0e0;
+    stroke-width: 3;
+    r: 20
+}
+/* Add Component SCSS Above */
+

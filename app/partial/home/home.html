@@ -5,11 +5,11 @@
              xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;">
             <g>
 
-                <g ng-repeat="factory in ctrl.factories" class="kby-factory kby-condition" >
-                    <circle draggable on-drag-end="ctrl.onDragEndCallback(x,y)"
-                            ng-attr-transform="matrix(1 0 0 1 {{factory.x}} {{factory.y}})"
-                            class="bogus">
-                    </circle>
+                <g ng-repeat="factory in ctrl.factories"
+                   class="kby-factory kby-condition"
+                   draggable on-drag-end="ctrl.onDragEndCallback(x,y)"
+                   ng-attr-transform="matrix(1 0 0 1 {{factory.x}} {{factory.y}})">
+                    <circle></circle>
                 </g>
 
             </g>

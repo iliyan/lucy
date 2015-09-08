@@ -1,6 +1,7 @@
 //'use strict';
 
 var baseDir = 'app';
+var buildDir = 'build';
 
 var defaults = {
 
@@ -49,12 +50,15 @@ var defaults = {
 
     coverageReporter: {
         type: 'html',
-        dir: baseDir + '/test/unit-results/coverage',
-        file: 'coverage.html'
+        dir: buildDir + '/test/unit-results/coverage',
+        file: 'coverage.html',
+        instrumenterOptions: { // https://github.com/karma-runner/karma-coverage#dont-minify-instrumenter-output
+            istanbul: { noCompact: true }
+        }
     },
 
     htmlReporter: {
-        outputDir: baseDir + '/test/unit-results/html'
+        outputDir: buildDir + '/test/unit-results/html'
     },
 
     logLevel: 'info',

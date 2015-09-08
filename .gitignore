@@ -27,6 +27,8 @@ build/Release
 node_modules
 
 
-vendor
 .idea
-/build/tmp
+
+.sass-cache
+vendor
+build

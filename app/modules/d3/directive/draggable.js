@@ -29,8 +29,10 @@ angular.module('d3')
                     })
                     .on("dragend", function dragend(d) {
                         d3.select(this).attr("transform", "matrix(" + d.transform0.join(' ') + ")");
-                        scope.onDragEnd({x: d.transform[4], y: d.transform[5]});
                         d3.select(this).classed("draggable-active", false);
+                        scope.$applyAsync(function() {
+                            scope.onDragEnd({x: d.transform[4], y: d.transform[5]});
+                        });
                     });
 
                 d3.select(element[0])

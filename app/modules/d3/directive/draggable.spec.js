@@ -9,11 +9,12 @@ describe('draggable', function() {
     compile = $compile;
   }));
 
-  iit('should be available', inject(function($rootScope) {
+  it('should be available', inject(function($window) {
 
       var element = compile(angular.element('<circle draggable></circle>'))(scope);
       expect(element.length).toBe(1);
       expect(element.attr('transform')).toBeUndefined();
+
 
   }));
 });

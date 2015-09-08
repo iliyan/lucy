@@ -1,0 +1,24 @@
+<div class="row" ng-controller="HomeCtrl as ctrl">
+
+    <div class="col-lg-12" style="height:800px">
+        <svg version="1.1" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;">
+            <g>
+
+                <g ng-repeat="factory in ctrl.factories" class="kby-factory kby-condition" >
+                    <circle draggable on-drag-end="spi.onDragEndCallback(x,y)"
+                            ng-attr-transform="matrix(1 0 0 1 {{factory.x}} {{factory.y}})"
+                            class="bogus">
+                    </circle>
+                </g>
+
+            </g>
+        </svg>
+
+        <knob-world>
+            <knob-generator x="50" y=50 class="kby-condition"></knob-generator>
+
+            <knob ng-repeat="k in knobs" x="k[0]" y="k[1]"></knob>
+        </knob-world>
+    </div>
+</div>
